@@ -1,0 +1,18 @@
+## T1: Project Scaffolding — COMPLETED (2026-03-04)
+
+PRD items covered: 1, 2, 3, 4, 5
+
+Files created:
+- crslr-backend/package.json — all deps + scripts (dev, build, start, test, lint, typecheck, migrate)
+- crslr-backend/tsconfig.json — ES2022, NodeNext, strict
+- crslr-backend/vitest.config.ts — globals, node env, coverage
+- crslr-backend/.gitignore
+- crslr-backend/.eslintrc.json
+- crslr-backend/src/app.ts — buildApp() with helmet + CORS (origin: crslr.app + capacitor://crslr.app, methods: GET/POST/DELETE), GET /health
+- crslr-backend/src/server.ts — entry point, listens on PORT (default 3000)
+- crslr-backend/src/app.test.ts — health check test via app.inject()
+
+Verification:
+- npm test: 1 passed ✓
+- npm run typecheck: 0 errors ✓
+- npm run lint: 0 errors ✓
